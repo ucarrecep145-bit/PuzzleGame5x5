@@ -1,0 +1,33 @@
+// BP_GameMode Blueprint
+
+// GameController that integrates GridManager, PuzzleManager, and LevelManager.
+
+class BP_GameMode : GameModeBase
+{
+    // Reference to GridManager
+    GridManager* GridMgr;
+
+    // Reference to PuzzleManager
+    PuzzleManager* PuzzleMgr;
+
+    // Reference to LevelManager
+    LevelManager* LevelMgr;
+
+    // Constructor
+    BP_GameMode()
+    {
+        // Initialize managers
+        GridMgr = new GridManager();
+        PuzzleMgr = new PuzzleManager();
+        LevelMgr = new LevelManager();
+    }
+
+    // Override start function
+    virtual void StartPlay() override
+    {
+        Super::StartPlay();
+        // Start game logic
+    }
+
+    // Additional game logic and methods here...
+}
