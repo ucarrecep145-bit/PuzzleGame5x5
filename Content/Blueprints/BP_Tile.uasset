@@ -1,0 +1,26 @@
+// Tile Blueprint Actor
+
+// Variables
+var Color TileColor;
+var int GridX;
+var int GridY;
+var bool IsSelected;
+var bool CanMove;
+
+// Functions
+void SetTileColor(Color NewColor) {
+    TileColor = NewColor;
+}
+
+void HighlightTile() {
+    IsSelected = true;
+}
+
+void UnHighlightTile() {
+    IsSelected = false;
+}
+
+void MoveToPosition(int NewGridX, int NewGridY) {
+    GridX = NewGridX;
+    GridY = NewGridY;
+}
