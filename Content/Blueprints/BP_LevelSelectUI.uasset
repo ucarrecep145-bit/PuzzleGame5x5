@@ -1,0 +1,40 @@
+// Level Selection Menu Logic for 100 Levels
+
+BlueprintGeneratedClass BP_LevelSelectUI.BP_LevelSelectUI_C : public UUserWidget
+{
+    GENERATED_BODY()
+
+public:
+    // Array to hold the levels
+    UPROPERTY(EditAnywhere)
+    TArray<FString> Levels;
+
+    // Function to initialize levels
+    void InitializeLevels()
+    {
+        for (int32 i = 1; i <= 100; i++)
+        {
+            Levels.Add(FString::Printf(TEXT("Level %d"), i));
+        }
+    }
+
+    // Function to create UI elements for level selection
+    void CreateLevelButtons()
+    {
+        for (int32 i = 0; i < Levels.Num(); i++)
+        {
+            // Create button for each level
+            UButton* LevelButton = NewObject<UButton>();
+            LevelButton->SetText(FText::FromString(Levels[i]));
+            LevelButton->OnClicked.AddDynamic(this, &BP_LevelSelectUI::OnLevelButtonClicked);
+            // Add button to the UI
+            AddChild(LevelButton);
+        }
+    }
+
+    // Called when a level button is clicked
+    void OnLevelButtonClicked()
+    {
+        // Logic to load the selected level
+    }
+}
