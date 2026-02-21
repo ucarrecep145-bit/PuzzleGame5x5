@@ -1,0 +1,30 @@
+// Main Menu UI Blueprint
+// This file is intended to hold the main menu UI elements for the game.
+
+{
+    "Type": "Blueprint",
+    "Name": "BP_MainMenuUI",
+    "Elements": [
+        {
+            "Type": "Button",
+            "Name": "StartGameButton",
+            "Properties": {
+                "Text": "Start Game"
+            }
+        },
+        {
+            "Type": "Button",
+            "Name": "OptionsButton",
+            "Properties": {
+                "Text": "Options"
+            }
+        },
+        {
+            "Type": "Button",
+            "Name": "ExitButton",
+            "Properties": {
+                "Text": "Exit"
+            }
+        }
+    ]
+}
