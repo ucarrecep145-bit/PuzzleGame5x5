@@ -1,0 +1,31 @@
+// Mobile Touch Input Handler for Unreal Engine 4
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "BP_InputHandler.generated.h"
+
+UCLASS()
+class PUZZLEGAME5X5_API ABP_InputHandler : public AActor
+{
+    GENERATED_BODY()
+
+public:
+    // Sets default values for this actor's properties
+    ABP_InputHandler();
+
+protected:
+    // Called when the game starts or when spawned
+    virtual void BeginPlay() override;
+
+public:
+    // Called every frame
+    virtual void Tick(float DeltaTime) override;
+
+    // Function to handle mobile touch inputs
+    UFUNCTION()
+    void HandleTouchInput(FVector2D TouchPosition);
+};
+
+void ABP_InputHandler::HandleTouchInput(FVector2D TouchPosition) {
+    // Handle touch input logic here
+}
