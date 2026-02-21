@@ -1,0 +1,26 @@
+// UI Controller for in-game HUD and menus 
+
+class BP_GameUI : public UUserWidget 
+{
+    GENERATED_BODY()
+
+public:
+    // Constructor
+    BP_GameUI();
+
+protected:
+    // Called when the game starts
+    virtual void NativeConstruct() override;
+
+public:
+    // Function to update the HUD
+    void UpdateHUD();
+
+    // Function to show menu
+    void ShowMenu();
+
+    // Function to hide menu
+    void HideMenu();
+};
+
+// Implementations can follow here...
